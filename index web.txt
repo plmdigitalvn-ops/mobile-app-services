@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLM DIGITAL | Global Strategic Agency</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap');
+        
+        :root { 
+            --plm-blue: #0066ff;
+            --plm-cyan: #00f2ff;
+            --plm-dark: #0f172a;
+            --plm-light: #f8fafc;
+        }
+        
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            background-color: #ffffff;
+            color: var(--plm-dark);
+            overflow-x: hidden;
+        }
+
+        .font-heading { font-family: 'Space Grotesk', sans-serif; }
+
+        /* Smooth Scroll */
+        html { scroll-behavior: smooth; }
+
+        /* Soft Shadow & Glass */
+        .soft-card {
+            background: #ffffff;
+            border: 1px solid rgba(0, 102, 255, 0.05);
+            box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.04);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .soft-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px -10px rgba(0, 102, 255, 0.12);
+            border-color: rgba(0, 102, 255, 0.2);
+        }
+
+        /* Branding Gradients */
+        .text-gradient {
+            background: linear-gradient(135deg, var(--plm-blue) 0%, var(--plm-cyan) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .bg-gradient-plm {
+            background: linear-gradient(135deg, var(--plm-blue) 0%, var(--plm-cyan) 100%);
+        }
+
+        /* Navigation Animation */
+        .nav-link {
+            position: relative;
+            font-weight: 600;
+            color: var(--plm-dark);
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0; height: 2px;
+            bottom: -4px; left: 0;
+            background: var(--bg-gradient-plm);
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after { width: 100%; }
+
+        /* Floating Animation */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        .float-element { animation: float 6s ease-in-out infinite; }
+
+        .btn-primary {
+            background: var(--plm-dark);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .btn-primary:hover {
+            background: var(--plm-blue);
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 102, 255, 0.3);
+        }
+
+        .section-tag {
+            background: rgba(0, 102, 255, 0.05);
+            color: var(--plm-blue);
+            padding: 6px 16px;
+            border-radius: 100px;
+            font-size: 0.75rem;
+            font-weight: 800;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-gradient-plm rounded-xl flex items-center justify-center shadow-lg shadow-blue-200">
+                    <span class="text-white font-black text-xl">P</span>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-xl font-extrabold tracking-tighter leading-none">PLM <span class="text-blue-600">DIGITAL</span></span>
+                    <span class="text-[9px] font-bold text-slate-400 tracking-[0.2em] uppercase">Global Studio</span>
+                </div>
+            </div>
+            
+            <nav class="hidden lg:flex gap-10">
+                <a href="#about" class="nav-link text-sm uppercase">Về chúng tôi</a>
+                <a href="#services" class="nav-link text-sm uppercase">Dịch vụ</a>
+                <a href="#process" class="nav-link text-sm uppercase">Quy trình</a>
+                <a href="#contact" class="nav-link text-sm uppercase">Liên hệ</a>
+            </nav>
+
+            <a href="#contact" class="hidden md:block bg-slate-100 hover:bg-blue-600 hover:text-white px-6 py-2.5 rounded-full text-xs font-bold transition-all">
+                BẮT ĐẦU DỰ ÁN
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-44 pb-32 overflow-hidden">
+        <!-- Abstract Shapes for Background -->
+        <div class="absolute top-20 right-[-10%] w-[500px] h-[500px] bg-blue-50 rounded-full blur-[120px] opacity-60"></div>
+        <div class="absolute bottom-0 left-[-5%] w-[400px] h-[400px] bg-cyan-50 rounded-full blur-[100px] opacity-60"></div>
+
+        <div class="container mx-auto px-6 relative z-10 text-center">
+            <div data-aos="fade-up" class="inline-block mb-6">
+                <span class="section-tag">Digital Excellence 2024</span>
+            </div>
+            <h1 data-aos="fade-up" data-aos-delay="100" class="text-5xl md:text-8xl font-black tracking-tight leading-[1.1] mb-8">
+                Kiến tạo giải pháp<br>
+                <span class="text-gradient">Vươn tầm quốc tế.</span>
+            </h1>
+            <p data-aos="fade-up" data-aos-delay="200" class="text-lg md:text-xl text-slate-500 max-w-2xl mx-auto mb-12 font-medium">
+                Chúng tôi đồng hành cùng doanh nghiệp xây dựng hệ thống số hóa chuẩn mực, tối ưu vận hành và đột phá doanh thu với công nghệ từ PLM Digital.
+            </p>
+            
+            <div data-aos="fade-up" data-aos-delay="300" class="flex flex-col sm:flex-row justify-center gap-6">
+                <a href="#contact" class="btn-primary">
+                    Tư vấn miễn phí <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="#services" class="px-8 py-4 rounded-xl border-2 border-slate-100 hover:border-blue-200 font-bold transition-all flex items-center justify-center gap-3">
+                    Xem dịch vụ <i class="fas fa-th-large text-blue-600"></i>
+                </a>
+            </div>
+
+            <!-- Stats Mobile Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-24 max-w-4xl mx-auto">
+                <div data-aos="zoom-in" data-aos-delay="400" class="text-center">
+                    <div class="text-4xl font-extrabold text-blue-600 mb-1">98%</div>
+                    <div class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Hài lòng</div>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="500" class="text-center">
+                    <div class="text-4xl font-extrabold text-blue-600 mb-1">100+</div>
+                    <div class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Dự án</div>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="600" class="text-center">
+                    <div class="text-4xl font-extrabold text-blue-600 mb-1">05+</div>
+                    <div class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Quốc gia</div>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="700" class="text-center">
+                    <div class="text-4xl font-extrabold text-blue-600 mb-1">24/7</div>
+                    <div class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Hỗ trợ</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-32 bg-slate-50/50">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+                <div class="max-w-xl">
+                    <span class="section-tag mb-4">Chúng tôi làm gì</span>
+                    <h2 class="text-4xl md:text-6xl font-black tracking-tight mt-4">Giải pháp <span class="text-blue-600">toàn diện</span> cho doanh nghiệp.</h2>
+                </div>
+                <p class="text-slate-500 max-w-xs font-medium border-l-4 border-blue-600 pl-6 py-2">
+                    Tập trung vào tính thực dụng, hiệu quả và khả năng mở rộng quy mô.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div data-aos="fade-up" class="soft-card p-10 rounded-[2rem]">
+                    <div class="w-16 h-16 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center text-2xl mb-8">
+                        <i class="fas fa-chess-knight"></i>
+                    </div>
+                    <h3 class="text-2xl font-extrabold mb-4">Chiến lược Số</h3>
+                    <p class="text-slate-500 leading-relaxed mb-8">
+                        Tư vấn lộ trình chuyển đổi số, thiết kế mô hình kinh doanh online tối ưu chi phí vận hành.
+                    </p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center gap-3 text-sm font-bold text-slate-600"><i class="fas fa-check-circle text-blue-500"></i> Market Analysis</li>
+                        <li class="flex items-center gap-3 text-sm font-bold text-slate-600"><i class="fas fa-check-circle text-blue-500"></i> Growth Roadmap</li>
+                    </ul>
+                </div>
+
+                <!-- Service 2 -->
+                <div data-aos="fade-up" data-aos-delay="100" class="soft-card p-10 rounded-[2rem] border-blue-100 shadow-xl shadow-blue-900/5">
+                    <div class="w-16 h-16 bg-gradient-plm text-white rounded-2xl flex items-center justify-center text-2xl mb-8 shadow-lg shadow-blue-200">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="text-2xl font-extrabold mb-4 text-blue-600">Phát triển Phần mềm</h3>
+                    <p class="text-slate-500 leading-relaxed mb-8">
+                        Xây dựng Website, App Mobile và hệ thống quản lý ERP/CRM may đo theo nhu cầu doanh nghiệp.
+                    </p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center gap-3 text-sm font-bold text-slate-600"><i class="fas fa-check-circle text-blue-500"></i> Custom Web/App</li>
+                        <li class="flex items-center gap-3 text-sm font-bold text-slate-600"><i class="fas fa-check-circle text-blue-500"></i> High Performance</li>
+                    </ul>
+                </div>
+
+                <!-- Service 3 -->
+                <div data-aos="fade-up" data-aos-delay="200" class="soft-card p-10 rounded-[2rem]">
+                    <div class="w-16 h-16 bg-cyan-50 text-cyan-600 rounded-2xl flex items-center justify-center text-2xl mb-8">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3 class="text-2xl font-extrabold mb-4">Vận hành Global</h3>
+                    <p class="text-slate-500 leading-relaxed mb-8">
+                        Tự động hóa quy trình, tích hợp AI và quản lý hạ tầng Cloud chuẩn quốc tế.
+                    </p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center gap-3 text-sm font-bold text-slate-600"><i class="fas fa-check-circle text-cyan-500"></i> AI Automation</li>
+                        <li class="flex items-center gap-3 text-sm font-bold text-slate-600"><i class="fas fa-check-circle text-cyan-500"></i> Cloud Managed</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process -->
+    <section id="process" class="py-32 bg-white overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-24">
+                <span class="section-tag mb-4">Quy trình chuẩn</span>
+                <h2 class="text-4xl md:text-5xl font-black tracking-tight mt-4">Cách chúng tôi tạo nên <span class="text-gradient">thành công.</span></h2>
+            </div>
+
+            <div class="relative">
+                <!-- Desktop Connection Line -->
+                <div class="hidden lg:block absolute top-1/2 left-0 w-full h-1 bg-slate-50 -translate-y-1/2 z-0"></div>
+
+                <div class="grid md:grid-cols-4 gap-8 relative z-10">
+                    <div data-aos="fade-right" class="bg-white p-8 rounded-3xl text-center border border-slate-50">
+                        <div class="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center font-black mx-auto mb-6">01</div>
+                        <h4 class="text-lg font-extrabold mb-3 uppercase">Lắng nghe</h4>
+                        <p class="text-sm text-slate-500">Tìm hiểu nhu cầu và nỗi đau thực sự của doanh nghiệp.</p>
+                    </div>
+                    <div data-aos="fade-right" data-aos-delay="100" class="bg-white p-8 rounded-3xl text-center border border-slate-50">
+                        <div class="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center font-black mx-auto mb-6">02</div>
+                        <h4 class="text-lg font-extrabold mb-3 uppercase">Giải pháp</h4>
+                        <p class="text-sm text-slate-500">Thiết kế bản vẽ kiến trúc và lộ trình triển khai chi tiết.</p>
+                    </div>
+                    <div data-aos="fade-right" data-aos-delay="200" class="bg-white p-8 rounded-3xl text-center border border-slate-50 shadow-xl shadow-blue-900/5">
+                        <div class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-black mx-auto mb-6">03</div>
+                        <h4 class="text-lg font-extrabold mb-3 uppercase">Thực thi</h4>
+                        <p class="text-sm text-slate-500">Lập trình và hoàn thiện sản phẩm với tiêu chuẩn cao nhất.</p>
+                    </div>
+                    <div data-aos="fade-right" data-aos-delay="300" class="bg-white p-8 rounded-3xl text-center border border-slate-50">
+                        <div class="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center font-black mx-auto mb-6">04</div>
+                        <h4 class="text-lg font-extrabold mb-3 uppercase">Bàn giao</h4>
+                        <p class="text-sm text-slate-500">Đào tạo vận hành và hỗ trợ nâng cấp trọn đời.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing / CTA -->
+    <section id="contact" class="py-32 bg-slate-900 text-white relative overflow-hidden rounded-[4rem] mx-4 mb-4">
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-blue-600/20 to-transparent"></div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-20 items-center">
+                <div>
+                    <span class="text-blue-400 font-black uppercase tracking-widest text-xs mb-6 block">Ready to scale?</span>
+                    <h2 class="text-5xl md:text-7xl font-black tracking-tight mb-8 leading-[1.1]">Sẵn sàng cho sự <span class="text-blue-400 italic">đột phá?</span></h2>
+                    
+                    <div class="space-y-6 mb-12">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-check text-blue-400"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-lg">Gói Setup chuyên nghiệp</h5>
+                                <p class="text-slate-400 text-sm">Chỉ từ 5.000.000 VNĐ cho khâu chuẩn hóa ban đầu.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-check text-blue-400"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-lg">Phát triển theo yêu cầu</h5>
+                                <p class="text-slate-400 text-sm">Giải pháp may đo linh hoạt theo ngân sách của khách hàng.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-6">
+                        <div class="p-6 bg-white/5 rounded-2xl border border-white/10">
+                            <div class="text-[10px] uppercase font-bold text-slate-400 mb-1">Email us</div>
+                            <div class="font-bold text-lg">hello@plmdigital.global</div>
+                        </div>
+                        <div class="p-6 bg-white/5 rounded-2xl border border-white/10">
+                            <div class="text-[10px] uppercase font-bold text-slate-400 mb-1">Call us</div>
+                            <div class="font-bold text-lg">+84 9xx xxx xxx</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-10 md:p-12 rounded-[3rem] shadow-2xl">
+                    <h3 class="text-2xl font-black text-slate-900 mb-8">Gửi yêu cầu tư vấn</h3>
+                    <form class="space-y-6">
+                        <div>
+                            <label class="text-[10px] font-black uppercase tracking-widest text-slate-400 block mb-2">Họ và tên</label>
+                            <input type="text" class="w-full bg-slate-50 border-none p-4 rounded-xl text-slate-900 font-semibold focus:ring-2 focus:ring-blue-600 transition-all outline-none">
+                        </div>
+                        <div>
+                            <label class="text-[10px] font-black uppercase tracking-widest text-slate-400 block mb-2">Dịch vụ quan tâm</label>
+                            <select class="w-full bg-slate-50 border-none p-4 rounded-xl text-slate-900 font-semibold focus:ring-2 focus:ring-blue-600 transition-all outline-none appearance-none">
+                                <option>Tư vấn Chiến lược</option>
+                                <option>Website / App Mobile</option>
+                                <option>Hệ thống Quản lý (ERP/CRM)</option>
+                                <option>Khác</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="text-[10px] font-black uppercase tracking-widest text-slate-400 block mb-2">Nội dung yêu cầu</label>
+                            <textarea rows="4" class="w-full bg-slate-50 border-none p-4 rounded-xl text-slate-900 font-semibold focus:ring-2 focus:ring-blue-600 transition-all outline-none"></textarea>
+                        </div>
+                        <button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-black py-4 rounded-xl transition-all shadow-lg shadow-blue-600/30">
+                            GỬI LIÊN HỆ NGAY
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-10">
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 bg-gradient-plm rounded-lg flex items-center justify-center">
+                        <span class="text-white font-black text-sm">P</span>
+                    </div>
+                    <span class="text-lg font-extrabold tracking-tighter">PLM DIGITAL</span>
+                </div>
+                
+                <div class="flex gap-10 text-xs font-bold uppercase tracking-widest text-slate-400">
+                    <a href="#" class="hover:text-blue-600 transition-colors">Facebook</a>
+                    <a href="#" class="hover:text-blue-600 transition-colors">LinkedIn</a>
+                    <a href="#" class="hover:text-blue-600 transition-colors">Zalo</a>
+                </div>
+
+                <div class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">
+                    &copy; 2024 PLM DIGITAL. ALL RIGHTS RESERVED.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            easing: 'ease-out'
+        });
+    </script>
+</body>
+</html>
